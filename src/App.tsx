@@ -53,8 +53,8 @@ export default function App() {
     <div className="page-shell">
       <header className="topbar">
         <div className="brand-wrap">
-          <div className="brand-mark">V</div>
-          <span>Vines Velvet</span>
+          <div className="brand-mark">U</div>
+          <span>Us.Unlocked</span>
         </div>
 
         <nav className="nav-links" aria-label="Main navigation">
@@ -70,11 +70,11 @@ export default function App() {
       <main>
         <section className="hero section-card">
           <div className="hero-copy">
-            <span className="eyebrow">Premium relationship software</span>
+            <span className="eyebrow">Relationship Mega Hub</span>
             <h1>Turn everyday moments into a stronger, more joyful connection.</h1>
             <p>
-              Vines Velvet is a relationship mega hub built for couples to grow together across every device,
-              with rituals, insight, play, and protection woven into one premium experience.
+              Us.Unlocked is a premium relationship platform built for couples to grow together across every device,
+              with rituals, insight, play, and protection woven into one elevated experience.
             </p>
 
             <div className="hero-actions">
