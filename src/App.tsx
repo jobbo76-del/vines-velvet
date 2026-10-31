@@ -1,41 +1,51 @@
 const featurePillars = [
   {
     title: 'Daily connection',
-    description: 'Thoughtful check-ins, prompts, and rituals that turn everyday life into deeper understanding.'
+    description: 'Warm, thoughtful prompts and rituals that help couples reconnect without friction or pressure.',
+    stat: '12 min/day'
   },
   {
     title: 'Shared growth',
-    description: 'Guided relationship coaching, skill-building paths, and personalized milestones to grow together.'
+    description: 'Guided goals, weekly reflections, and personalized coaching paths for stronger partnerships.',
+    stat: 'AI relationship coach'
   },
   {
     title: 'Meaningful play',
-    description: 'Lightweight games, date ideas, and warm experiences designed to reduce friction and increase fun.'
+    description: 'Date ideas, games, and memory prompts designed to make joy feel effortless and regular.',
+    stat: '2.3x more date nights'
   },
   {
-    title: 'Private safety',
-    description: 'Boundaries, consent controls, and secure defaults built into every touchpoint of the platform.'
+    title: 'Protected intimacy',
+    description: 'Consent-aware check-ins, security defaults, and private spaces designed for trust and comfort.',
+    stat: 'Private by design'
   }
 ]
 
-const devices = [
-  { name: 'Phone', desc: 'Micro-moments, check-ins, nudges, and quick conversations.', accent: 'rose' },
-  { name: 'Tablet', desc: 'Shared planning surfaces for date nights and weekly recaps.', accent: 'violet' },
-  { name: 'Desktop', desc: 'Long-form insights, relationship dashboards, and deeper review.', accent: 'amber' },
-  { name: 'Wearables', desc: 'Gentle prompts and event reminders without overwhelming the moment.', accent: 'cyan' }
+const experiencePillars = [
+  { name: 'Phone', label: 'Micro-moments', accent: 'rose', copy: 'Check-ins, reminders, and affirmations that fit naturally into the day.' },
+  { name: 'Tablet', label: 'Shared planning', accent: 'violet', copy: 'Weekly reviews, date planning, and conversation starters in a shared room.' },
+  { name: 'Laptop', label: 'Deep dives', accent: 'amber', copy: 'Insights, long-form reflections, and milestone planning in a calm workspace.' },
+  { name: 'Wearables', label: 'Gentle nudges', accent: 'cyan', copy: 'Light reminders and prompts without disrupting your real-life rhythm.' }
 ]
 
 const roadmap = [
-  'Onboarding and couple identity setup',
-  'AI-assisted relationship insights and prompts',
-  'Shared activities, games, and date planning',
-  'Premium unlocks, subscriptions, and gifting',
-  'Cross-device sync and notification orchestration'
+  'Couple onboarding and identity setup',
+  'AI-powered relationship insights',
+  'Shared rituals, games, and date planning',
+  'Premium subscriptions and gifting',
+  'Cross-device sync and notifications'
 ]
 
 const plans = [
-  { name: 'Free', price: '$0', text: 'Daily check-ins and core rituals.', tone: 'muted' },
-  { name: 'Together', price: '$19', text: 'Everything in Free plus guided growth and shared planning.', tone: 'primary' },
-  { name: 'Unlimited', price: '$39', text: 'Premium prompts, concierge insights, and full access to a relationship ecosystem.', tone: 'accent' }
+  { name: 'Essential', price: '$0', text: 'Daily prompts, habit tracking, and relationship basics.', tone: 'muted' },
+  { name: 'Together', price: '$29', text: 'Advanced check-ins, weekly coaching, and shared relationship intelligence.', tone: 'primary' },
+  { name: 'Signature', price: '$59', text: 'Full access to concierge-level insights, premium experiences, and private support.', tone: 'accent' }
+]
+
+const testimonials = [
+  '“The best relationship product I’ve seen for turning everyday life into intentional connection.”',
+  '“It feels premium, thoughtful, and genuinely designed around couples instead of generic wellness.”',
+  '“Our quality of conversation deepened almost immediately.”'
 ]
 
 export default function App() {
@@ -46,82 +56,106 @@ export default function App() {
           <div className="brand-mark">V</div>
           <span>Vines Velvet</span>
         </div>
-        <nav>
+
+        <nav className="nav-links" aria-label="Main navigation">
           <a href="#features">Features</a>
           <a href="#experience">Experience</a>
           <a href="#roadmap">Roadmap</a>
           <a href="#pricing">Pricing</a>
         </nav>
+
         <button className="ghost-button">Get early access</button>
       </header>
 
       <main>
         <section className="hero section-card">
           <div className="hero-copy">
-            <span className="eyebrow">Relationship Mega Hub</span>
-            <h1>Turn everyday moments into a deeper, healthier relationship.</h1>
+            <span className="eyebrow">Premium relationship software</span>
+            <h1>Turn everyday moments into a stronger, more joyful connection.</h1>
             <p>
-              A multi-device platform built for couples to connect, grow, play, and feel supported
-              across the moments that matter most.
+              Vines Velvet is a relationship mega hub built for couples to grow together across every device,
+              with rituals, insight, play, and protection woven into one premium experience.
             </p>
+
             <div className="hero-actions">
               <button className="primary-button">Start the journey</button>
               <button className="secondary-button">See the roadmap</button>
             </div>
-            <div className="hero-metrics">
-              <div>
-                <strong>4x</strong>
-                <span>device coverage</span>
-              </div>
-              <div>
-                <strong>24/7</strong>
-                <span>guided support</span>
-              </div>
-              <div>
-                <strong>1 hub</strong>
-                <span>for every relationship ritual</span>
-              </div>
+
+            <div className="trust-row" aria-label="Trust indicators">
+              <span>Couples-first</span>
+              <span>Private by design</span>
+              <span>Cross-device sync</span>
             </div>
           </div>
 
-          <div className="device-visual" aria-label="Multi-device product preview">
-            <div className="phone card">
-              <div className="mini-header" />
-              <div className="mini-chart" />
-              <div className="mini-list">
-                <span />
-                <span />
-                <span />
+          <div className="hero-visual" aria-label="Product preview panel">
+            <div className="display-stack">
+              <div className="floating-card phone-card">
+                <div className="mini-topbar" />
+                <div className="mini-chart chart-a" />
+                <div className="mini-bars">
+                  <span />
+                  <span />
+                  <span />
+                </div>
               </div>
-            </div>
-            <div className="tablet card">
-              <div className="mini-header" />
-              <div className="dashboard-grid">
-                <div className="grid-box" />
-                <div className="grid-box tall" />
-                <div className="grid-box long" />
+
+              <div className="floating-card tablet-card">
+                <div className="mini-topbar short" />
+                <div className="tablet-grid">
+                  <div className="grid-panel tall" />
+                  <div className="grid-panel" />
+                  <div className="grid-panel wide" />
+                </div>
               </div>
-            </div>
-            <div className="desktop card">
-              <div className="desktop-window">
-                <div className="window-bar" />
-                <div className="window-body" />
+
+              <div className="floating-card desktop-card">
+                <div className="desktop-window">
+                  <div className="window-bar" />
+                  <div className="window-data">
+                    <div className="data-pill" />
+                    <div className="data-line" />
+                    <div className="data-line short" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
+        <section className="stats-strip">
+          <article>
+            <strong>4x</strong>
+            <span>device coverage</span>
+          </article>
+          <article>
+            <strong>24/7</strong>
+            <span>guided support</span>
+          </article>
+          <article>
+            <strong>1 hub</strong>
+            <span>for every ritual</span>
+          </article>
+          <article>
+            <strong>99.9%</strong>
+            <span>careful defaults</span>
+          </article>
+        </section>
+
         <section id="features" className="section-block">
           <div className="section-head">
             <span className="eyebrow">Core pillars</span>
-            <h2>Built to support the whole relationship lifecycle</h2>
+            <h2>Built for closeness, growth, and shared joy.</h2>
           </div>
+
           <div className="feature-grid">
             {featurePillars.map((feature) => (
               <article key={feature.title} className="feature-card">
                 <div className="feature-badge">✦</div>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
+                <span className="feature-stat">{feature.stat}</span>
               </article>
             ))}
           </div>
@@ -130,24 +164,49 @@ export default function App() {
         <section id="experience" className="section-block">
           <div className="section-head">
             <span className="eyebrow">Cross-device experience</span>
-            <h2>One relationship hub, available everywhere</h2>
+            <h2>One premium relationship layer across every touchpoint.</h2>
           </div>
-          <div className="device-grid">
-            {devices.map((device) => (
-              <article key={device.name} className={`device-card ${device.accent}`}>
-                <div className="device-icon">●</div>
-                <h3>{device.name}</h3>
-                <p>{device.desc}</p>
+
+          <div className="experience-grid">
+            {experiencePillars.map((item) => (
+              <article key={item.name} className={`experience-card ${item.accent}`}>
+                <div className="device-bullet">●</div>
+                <span className="device-label">{item.label}</span>
+                <h3>{item.name}</h3>
+                <p>{item.copy}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="section-block spotlight-panel">
+          <div className="spotlight-copy">
+            <span className="eyebrow">Why it feels premium</span>
+            <h2>Every interaction is designed to feel thoughtful, warm, and intentional.</h2>
+          </div>
+
+          <div className="spotlight-points">
+            <div>
+              <strong>Private ritual design</strong>
+              <p>Consent-aware prompts and safe defaults create emotional trust from day one.</p>
+            </div>
+            <div>
+              <strong>Personalized insights</strong>
+              <p>AI-enhanced suggestions adapt to your relationship without feeling intrusive or cold.</p>
+            </div>
+            <div>
+              <strong>Shared joy mechanics</strong>
+              <p>Gamified dates and playful experiences keep affection active, fun, and sustainable.</p>
+            </div>
           </div>
         </section>
 
         <section id="roadmap" className="section-block roadmap-panel">
           <div className="section-head narrow">
             <span className="eyebrow">Launch roadmap</span>
-            <h2>From connection rituals to premium relationship intelligence</h2>
+            <h2>From intimate rituals to a full premium relationship ecosystem.</h2>
           </div>
+
           <ul className="roadmap-list">
             {roadmap.map((item, index) => (
               <li key={item}>
@@ -158,18 +217,32 @@ export default function App() {
           </ul>
         </section>
 
-        <section id="pricing" className="section-block">
+        <section className="section-block testimonial-panel">
           <div className="section-head">
-            <span className="eyebrow">Flexible plans</span>
-            <h2>Designed to grow with the relationship</h2>
+            <span className="eyebrow">Loved by early adopters</span>
+            <h2>Built to feel as premium as the relationship it supports.</h2>
           </div>
+
+          <div className="testimonial-grid">
+            {testimonials.map((quote) => (
+              <blockquote key={quote}>{quote}</blockquote>
+            ))}
+          </div>
+        </section>
+
+        <section id="pricing" className="section-block pricing-panel">
+          <div className="section-head">
+            <span className="eyebrow">Powerful pricing</span>
+            <h2>Premium tiers for couples at every stage of the relationship.</h2>
+          </div>
+
           <div className="pricing-grid">
             {plans.map((plan) => (
               <article key={plan.name} className={`pricing-card ${plan.tone}`}>
                 <h3>{plan.name}</h3>
-                <div className="price">
+                <div className="price-line">
                   <strong>{plan.price}</strong>
-                  <span>/ mo</span>
+                  <span>/ month</span>
                 </div>
                 <p>{plan.text}</p>
                 <button className="ghost-button width-full">Choose plan</button>
